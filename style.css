@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+}
+
+/*                                                       Global Properties                                                          */
+:root {
+  --primary-color: #fcaf02;
+  --primary-background: #000000;
+  --intro-color: #ffffff;
+  --small-font-size: 28px;
+  --primary-font-size: 32px;
+  --heading-font-size: 64px;
+  --padding: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-background);
+}
+
+
+/*                                                       Navigation Bar                                                          */
+.navigation-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  z-index: 1000;
+}
+
+.startup h2 {
+  position: relative;
+  font-size: var(--primary-font-size);
+  font-weight: 700;
+}
+.startup h2::before {
+  position: absolute;
+  content: "";
+  background-color: var(--primary-background);
+  width: 40px;
+  height: 1.5px;
+  bottom: 3px;
+  right: 0;
+}
+
+.links {
+  width: 40%;
+}
+.links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  & li {
+    font-size: var(--small-font-size);
+    font-weight: 400;
+  }
+}
+
+/*                                                       Intro Section                                                          */
+
+#intro {
+  width: 100%;
+  position: relative;
+  background-color: var(--primary-background);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: row;
+  margin-top: 75px;
+}
+
+.left-side {
+  width: 60%;
+}
+
+.char-intro {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.char-intro h1 {
+  color: var(--intro-color);
+  font-size: var(--heading-font-size);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.char-intro p {
+  font-size: var(--small-font-size);
+  color: var(--intro-color);
+  font-weight: 400;
+}
+
+.btn {
+  border: none;
+  color: var(--primary-background);
+  background-color: var(--primary-color);
+  font-size: var(--primary-font-size);
+  font-weight: 700;
+}
+
+.btn-login {
+  margin-top: 15px;
+  padding: 15px 100px;
+  border-radius: 500px;
+}
+
+.right-side {
+  margin-top: 50px;
+  width: 40%;
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+  }
+}
+
+/*                                                      Contact Us section                                                          */
+
+#contact_us {
+  width: 100%;
+  position: relative;
+  background-color: var(--primary-background);
+  padding: var(--padding);
+}
+
+.heading h1 {
+  margin-top: 100px;
+  font-size: var(--heading-font-size);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.form input:nth-child(3),
+.form input:nth-child(4) {
+  width: 48%;
+}
+.form input {
+  border: 2px solid var(--primary-color);
+  border-radius: 100px;
+  padding: calc(var(--padding) * 0.6);
+  font-size: var(--small-font-size);
+  color: var(--primary-color);
+  background: transparent;
+  width: 100%;
+  caret-color: var(--primary-color);
+}
+
+.form input::placeholder {
+  color: var(--primary-color);
+}
+
+.form input:is(:focus) {
+  outline: none;
+}
+
+.btn-submit {
+  padding: 15px 60px;
+  border-radius: 500px;
+  margin: 20px auto;
+}
+
+/*                                                       Bottom Table Section                                                          */
+
+.bottom_table {
+  width: 100%;
+  padding: var(--padding);
+  padding-top: 100px;
+  color: var(--primary-color);
+  background-color: var(--primary-background);
+}
+.bottom_table table {
+  width: 100%;
+}
+table,
+thead,
+tfoot {
+  border: 2px solid var(--primary-color);
+  border-collapse: collapse;
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}
+
+td {
+  padding: var(--padding);
+  border-right: 2px solid var(--primary-color);
+}
+
+tfoot {
+  background-color: var(--primary-color);
+  color: var(--primary-background);
+
+  & td:not(:last-child) {
+    border-color: var(--primary-background);
+  }
+}
+
+td:first-child {
+  width: 10%;
+  text-align: center;
+}
